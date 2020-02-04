@@ -1,0 +1,141 @@
+1.	What is PHP?
+PHP: Hypertext Preprocessor, is a server side scripting language that is embedded in HTML.
+It's used to manage dynamic content, databases, session tracking or build e-commerce sites.
+
+
+
+2. 	What are the common usage of PHP?
+- PHP performs system functions, i.e from files on a system it can create, open, read, write and close them.
+- PHP can handle forms, gather data from files, save data to a file, thru email you can send data, return data to the user.
+- Add, delete, modify elements within your database through PHP
+- Access cookies, variables and set cookies
+- Restrict users to access some pages of your website
+- Encrypt data
+
+
+
+3.	 In how many ways you can embed PHP code in a HTML page?
+All PHP code must be included inside one of the three special markup tags that are recognised by the PHP parser.
+
+<?php PHP code goes here ?>
+<? PHP code goes here ?>
+<script language="php">PHP code goes here </script>
+
+
+
+4.	Is PHP case sensitive language?
+No, PHP is partially case sensitive
+
+
+
+5. 	What are the characteristics of PHP variables?
+- All variables are denoted with a leading dollar sign "$"
+- The value of a variable is the value of its most recent assignment
+- Variables are assigned with the = opperator, with the variable on the left side and the expression to be evaluated on the right
+- Variables can, but not need, to be declared before assignment
+- Variables in PHP do not have intrinsic types (not know if it'll be used to store a number or a string)
+- Variables used before they are assigned have default vaues
+- PHP does converting types from on to another when neccesary
+
+
+
+6.	What are the different types of PHP variables?
+- Integers, Doubles, Booleans, NULL, Strings, Arrays, Objects, Resources (Special variables that hold references to resources external to PHP such as database connections).
+
+
+
+7.	What are the rules for naming a PHP variable?
+- Variable name must begin with a lettern or underscore character
+- A variable name can consist of numbers, letters, underscores, but you cannot use characters like "+-%,.&"
+
+
+
+8.	How do you define a constant in PHP?
+Constants are like variables except that once they are defined they cannot be changed or undefined
+A constant is an identifier (name) for a simple value. The value cannot be changed during the script.
+You have to use define() function and to retrieve the value of a constant, you have to simply specifying its name.
+Unlike with variables, you don't need to have a constant with $
+
+
+
+9.	What is the purporse of constant() function?
+This function will return the value of the constant. This is useful when you want to retrieve value of a constant, but you don't know its name.
+
+<?php
+define("MINSIZE", 50);
+echo MINSIZE;
+echo constant("MINSIZE"); //same thing as the previous line
+?>
+
+
+
+10.	What are the differences between PHP constants and variables?
+- There is no need to write a $ before a cosntant
+- Constants cannot be defined by simple assignment, they may only be defined using the define() function
+- Constants my be defined and accessed anywhere without regard to variable scoping rules
+- Once the Constants have been set, may not be redefined or undefined
+
+
+
+11.	What are PHP magic constants?
+PHP provides a large nnumber of predefined constants to any script which it runs know as magic constants
+
+
+
+12.	What is the purpose of break and continue statement?
+Break terminates the for loop or switch statement and transfers execution to the statement immediately following the loop
+
+Continue causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating
+
+
+13.	Explain the syntax for 'foreach' loop
+The foreach statement is used to loop through arrays. For each pass the value of the current array element is array to $value and the array pointer is moved one by one and in the next pass next element will be processed
+
+foreach (array as value) {
+	code
+}
+
+
+14.	What is a numeric array?
+Numeric array (an array with a numeric value). Values are stored and accessed in linear fashion
+
+
+
+15.	What is associate array?
+Associative array (an array containing one or more arrays and values are accessed using multiple indices).
+
+
+
+16.	How will you concatenate two strings in PHP?
+$string1 = "Hello World"
+$string2 = "1234"
+echo $string1." ".$string2;
+
+
+
+17.	How do you find the length of a string in PHP?
+strlen() is used to find the length of a string
+echo strlen("Hello World"); // 6
+
+
+
+18.	How will you locate a string withing a string in PHP?
+echo strpos("Hello World","World"); // 6
+
+
+
+19. 	How will you get the browser's details using PHP?
+One of the environment variables set by PHP is HTTP_USER_AGENT which identifies the user's browser and operating system
+
+
+
+20.	How will you generate random numbers using PHP?
+rand() function is used to generate a random number.
+srand() function specifies the seed number as its argument
+
+
+
+21.	What is the purpose of $_PHP_SELF variable?
+The PHP default variable $_PHP_SELF is used for the PHP script name and when you click "submit" button then same PHP script will be called
+
+22.	
