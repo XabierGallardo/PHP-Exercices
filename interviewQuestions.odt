@@ -1,5 +1,5 @@
 1.	What is PHP?
-PHP: Hypertext Preprocessor, is a server side scripting language that is embedded in HTML.
+PHP: Hypertext Preprocessor, is an open-source server side scripting language that is embedded in HTML.
 It's used to manage dynamic content, databases, session tracking or build e-commerce sites.
 
 
@@ -138,4 +138,170 @@ srand() function specifies the seed number as its argument
 21.	What is the purpose of $_PHP_SELF variable?
 The PHP default variable $_PHP_SELF is used for the PHP script name and when you click "submit" button then same PHP script will be called
 
-22.	
+22.	How will you redirect a page using PHP?
+The PHP header() function supplies raw HTTP headers to the browser and can be used to redirect it to another location.
+The redirection script should be at the very top of the page to prevent any other part of the page from loading.
+The target is specified at the location:heder as the argument to the header() function.
+After calling this function the exit() function can be used to halt parsing of rest of the code
+
+
+
+23.	How will you get information sent via get method in PHP?
+The PHP provides $_GET associative array to access all the sent information using GET method
+
+
+
+24.	How will you get information sent via post method in PHP?
+The PHP provides $_POST associative array to access all the sent information using POST method
+
+
+
+25.	What is the purpose $_REQUEST variable?
+The PHP $_REQUEST variable contains the contants of both $_GET and $_POST, $_COOKIE.
+The PHP $_REQUEST variable can be used to get the result from form data sent with both the GET and POST method.
+
+
+
+26.	How will you include the content of a PHP file into another PHP file?
+There are two PHP functions which can be used to include one PHP file into another PHP file
+	include()
+	require()
+
+In case of an error, require() generates a fatal error and halt the execution of the script
+include() generate a warning but the script will continue the execution
+
+
+
+27.	How to open a file in readonly mode, how to read a file?
+fopen() is used ton open a file. It requires two arguments stating first the file name and then mode in which to operate
+"r" mode opens the file for reading only and places the file pointer at the beginning of the file
+
+Once a file is opened with fopen(), it can be read with a function called fread()
+
+
+
+28.	How will you set cookies and get cookies using PHP?
+setcookie(name, value, expire, path, domain, security);
+
+PHP provides many ways to access cookies. Simplest way is to use either $_COOKIE or $HTTP_COOKIE_VARS
+
+
+
+29.	How will you access session variables in PHP?
+Session variables are stored in associative array called $_SESSION[]
+This variables can be accessed during lifetime of a session
+
+isset() function will check if session variable is already set or no
+
+session_destroy() will destroy function
+
+
+
+30.	How will you send an email using PHP?
+mail( to, subject, message, headers, parameters);
+
+
+
+31.	What is the purpose of $GLOBALS, $_SERVER, $_COOKIE, $_SESSION variables in PHP?
+
+$GLOBALS contains a reference to every variable which is currently available within the local scope of the script.	
+$_SERVER is an array containing information such as headers, paths and script locations. The entries in this array are created by the web server
+$_COOKIE An associative array of variables passed to the current script via HTTP cookies
+$_SESSION An associative array containing session variables avaialable to the current script
+
+
+
+32.	What is the purpose of time(),  date() and getdate() functions?
+
+time() gives all the information about the current date and time, it requires no arguments but returns an integer
+getdate() optinally acceptsa time stamp and returns an associative array containing information about the date
+date() function returns a formatted string representing a date
+
+
+
+33.	How will you connect a MySql database using PHP?
+connection mysql_connect(server, user, passwd, new_link, client_flag);
+
+
+
+34.	How will you create a MySql database using PHP?
+bool mysql_query(sql, connection);
+
+bool mysql_close(resource $link_identifier); (to close a mysql database)
+
+
+
+35.	How will you add a constructor function to a PHP class?
+__construct() define a constructor. You can pass as many as arguments you like into the constructor function
+
+__destruct() define a destructor.
+
+
+
+36.	How will you access the reference to same object within the object in PHP?
+The variable $this is a special variable and it refers to the same object 
+
+
+
+37.	How will you create objects in PHP?
+$physics = new Books;
+$maths = new Books;
+$chemistry = new Books;
+
+
+
+38.	How will you call member functions of a class in PHP?
+$physics->setTitle("Physics for high school");
+$physics->setPrice(10);
+
+
+
+39.	What is function overriding?
+Function definitions in child classes override definition with the same name in parent classes.
+In a child class, we can modify the definition of a funciton inherited from parent class.
+
+
+
+40.	What are interfaces in PHP?
+Interfaces are defined to provide a common function names to the implementors.
+Different implementors can implement those interfaces according to their requirements.
+Interfaces are skeltons which are implemented by developers.
+
+
+
+41.	What is the use of final keyword?
+final keyword prevents child classes from overriding a method by prefixing the definition with final
+
+
+
+42.	How can we get the IP address of the client?
+$_SERVER["REMOTE_ADDR"]; is the easiest solution
+
+
+
+43.	What's the difference between unset() and unlink()?
+unset() sets a variable to "undefined"
+unlink() deletes a file we pass to it from the file system
+
+
+
+44.	What are the main error types in PHP and how do they differ?
+Notices: Simple, non-critical erros that are ocurred during the script execution.
+
+Warnings: More important erros than Notices, however the script continue the execution (include() to a file that doesn't exist)
+
+Fatal: Causes a termination of the script execution when occurs (accessing a property of a non-existent object)
+
+
+
+45.	Difference between GET and POST?
+- GET displays the submitted data as part of the URL, while POST doesn't show as it's encoded in the request
+- GET can handle a maximum of 2048 characters, POST has no restrictions
+- GET allows nly ASCII data, POST has no restrictions and includes binary data
+- GET is used to retrieve data while POST to insert and update
+
+Understanding the fundamentals of the HTTP protocol is very important for a PHP developer, and this differences are an essential part
+
+
+
+46.	
