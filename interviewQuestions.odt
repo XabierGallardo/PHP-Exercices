@@ -304,4 +304,68 @@ Understanding the fundamentals of the HTTP protocol is very important for a PHP 
 
 
 
-46.	
+46.	How can you enable error reporting in PHP?
+init_set('display_errors');
+error_reporting(E_ALL);
+
+Enabling error messages is very important especially during the debugging process as indicates the exact line producing the error
+
+
+
+47.	How can we get the number of elements in an array?
+count() is used to return the number of elements in an array
+
+
+
+48.	The value of the variable input is a string 1,2,3,4,5,6,7. How would you get the sum of all integers?
+echo array_sum(explode(',',$input));
+
+explode() is one of the most used functions in PHP, it explodes a string into an array
+
+
+
+49.	What are the 3 scope levels available in PHP?
+Private: Visible only in its own class
+Public: Visible to any other code accessing the class
+Protected: Visible only to classes parents and classes that extend the current class
+
+
+
+50.	What are getter and setters and why are they important?
+Getters and Setters are methods used to declare or obtain the values of variables, usually private ones
+
+
+
+51.	What does MVC stand for and what does each component do?
+MVC stands for Model View Controller.
+The controller handles data passed to it by the view and also passes data to the view.
+It's responsible for interpretation of the data sent by the view and dispersing the data to the appropiate models awaiting results to pass back to the view. If any business logic, should be occurring in the controller.
+
+The model's job is to handle specific tasks related to a specific area of the application or functionality. Models will communicate directly with your database or other storage system and will handle business logic related to the results.
+
+The view is passed data by the controller and is displayed to the user.
+
+
+
+52.	What is Composer? What benefits have you found in it?
+Composer is a tool for dependency management. THe candidate can declare the libraries your product relies on and Composer will manage the installation and updating of the libraries.
+
+
+
+53. 	What is Jenkins?
+Jenkins is a software that allows continuos integration. Jenkins will be installed on a server where the central build will take place. On Jenkins:
+- Developers check their source code
+- Kenkins will pick up the changed source code and trigger a build and run any tests if required
+- The build output will be available in the Kenkins dashboards. Automatic notifications can also sent back to the developer
+
+
+
+54.	What is Continuous Integration?
+Is a development practice that requires developers to integrate code into a shared repository.
+This concept was meant to remove the problem of finding later occurrence of issues in the build lifecycle.
+Continuous integration requires the developers to have frequent builds. The common practice is that whenever a code commit occurs, a build should be triggered
+
+
+
+55.	How do you execute a PHP script from the command line?
+php script.php
