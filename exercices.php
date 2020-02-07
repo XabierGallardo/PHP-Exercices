@@ -100,14 +100,77 @@
 		}
 
 		//Creating key value pairs in arrays
-		$customer  = array('Name' -> $usersName, 'Street' -> $streetAddress, 'City' -> $cityAddress);
+		$customer  = array('Name' => $usersName, 'Street' => $streetAddress, 'City' => $cityAddress);
 		foreach($customer as $key => $value) {
 			echo "<p>"  . $key . " : " . $value . "</p>";
 		}
-	
 
+		//To combine arrays with +
+		echo "<p>Example of concatenation: ";
+		$names = $names + $customer;
+		foreach($names as $name) {
+			echo $name . " ";
+		}
+		echo "</p>";
 
+		//Multimensional arrays: Arrays inside arrays
+		$customers = [
+			['Sean', '123 Fake Street', '123123'],
+			['Xose', '456 Cualca Square', '223123'],
+			['Cian', '678 Craic Blvd', '323123']
+		];
+
+		echo "<p>Looping on a multidimensional array: ";
+		for($row = 0; $row < 3; $row++) {
+			for($col = 0; $col < 3; $col++) {
+				echo $customers[$row][$col] . ' ';
+			}
+			echo ',';
+		}
+		echo "</p>";
 		
+		//Common array Functions
+		//sort($array)	Sorts in ascending alphabetical order or if you add SORT_NUMERIC or SORT_STRING
+		//asort($array)	Sorts arrays with keys
+		//ksort($array)	Sorts by the key
+		//Put a r in front of the above to sort in reverse order
+
+		$myString = "  Ey lads! What's the craic?               ";
+
+		echo "<p>Example of strlen() " . strlen($myString) . "</p>";
+		echo "<p>Example of ltrim() " . strlen(ltrim($myString)) . "</p>";
+		echo "<p>Example of rtrim() " . strlen(rtrim($myString)) . "</p>";
+		echo "<p>Example of trim() " . strlen(trim($myString)) . "</p>";
+
+		echo "<p>Example of echo: " . $myString . "</p>";
+		echo "<p>Example of strtolower(): " . strtolower($myString) . "</p>";
+		echo "<p>Example of strtoupper(): " . strtoupper($myString) . "</p>";
+		echo "<p>Example of ucfirst(): " . ucfirst($myString) . "</p>";
+
+		//To convert strings to arrays or arrays to strings
+		echo "<p>Example of explode(): " . strtolower($myString) . "</p>"a
+
+		//printf outputs a formatted string	printf(format, arg1, arg2, arg++);
+		/*
+    %% - Returns a percent sign
+    %b - Binary number
+    %c - The character according to the ASCII value
+    %d - Signed decimal number (negative, zero or positive)
+    %e - Scientific notation using a lowercase (e.g. 1.2e+2)
+    %E - Scientific notation using a uppercase (e.g. 1.2E+2)
+    %u - Unsigned decimal number (equal to or greather than zero)
+    %f - Floating-point number (local settings aware)
+    %F - Floating-point number (not local settings aware)
+    %g - shorter of %e and %f
+    %G - shorter of %E and %f
+    %o - Octal number
+    %s - String
+    %x - Hexadecimal number (lowercase letters)
+    %X - Hexadecimal number (uppercase letters)
+
+		*/
+                printf ("Example of printf: %u", $myString);
+
 
 
 
