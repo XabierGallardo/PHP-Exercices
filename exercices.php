@@ -148,32 +148,103 @@
 		echo "<p>Example of ucfirst(): " . ucfirst($myString) . "</p>";
 
 		//To convert strings to arrays or arrays to strings
-		echo "<p>Example of explode(): " . strtolower($myString) . "</p>"a
+		echo "<p>Example of explode(): " . strtolower($myString) . "</p>";
 
 		//printf outputs a formatted string	printf(format, arg1, arg2, arg++);
+	
+		//printf ("Example of printf: %u", $myString);
+
+		//Objects can be converted into JSON by using the PHP function json_encode()
+		$myObj->name = "John";
+		$myObj->age = 30;
+		$myObj->city = "New York";
+		
+		$myJSON = json_encode($myObj);
+		echo "<p>Example of JSON encoding an object: " . $myJSON . "</p>";
+
+		//Arrays can be converted into JSON when using the PHP function json_encode()
+		$myArr = ["Sean", "Cian", "Darragh", "Padraig"];
+		$myArrayJSON = json_encode($myArr);
+		echo "<p>Example of JSON encoding an array: " . $myArrayJSON . "</p>";
+
+
+
+		//DATABASES
+		//PHP is a server side programming language and can be used to access a database. If you have a database on your server and you want to send a request to it from the client where you ask for the first 10 rows in a table called "customers".
+		//On the client, make a JSON object that describes the name of the table and the numbers of rows you want to return.
+		//Before you send the request to the server, convert the JSON object into a string and send it as a parameter to the url of the PHP page
+
+		//On js
+		/*obj = {"table":"customers". "limit":10};
+	       	dbParam = JSON.stringify(obj);
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				$("#demo").html = this.responseText;
+			}
+		};
+		xmlhttp.open("GET", "json_demodb.php?x=" + dbParam, true);
+		xmlhttp.send();*/
+
+
 		/*
-    %% - Returns a percent sign
-    %b - Binary number
-    %c - The character according to the ASCII value
-    %d - Signed decimal number (negative, zero or positive)
-    %e - Scientific notation using a lowercase (e.g. 1.2e+2)
-    %E - Scientific notation using a uppercase (e.g. 1.2E+2)
-    %u - Unsigned decimal number (equal to or greather than zero)
-    %f - Floating-point number (local settings aware)
-    %F - Floating-point number (not local settings aware)
-    %g - shorter of %e and %f
-    %G - shorter of %E and %f
-    %o - Octal number
-    %s - String
-    %x - Hexadecimal number (lowercase letters)
-    %X - Hexadecimal number (uppercase letters)
+		 * Define an object containing a table property and a limit property
+		 * Convert the object into a JSON string
+		 * Send the request to the PHP file, with the JSON string as a parameter
+		 * Wait until the request returns with the result (as JSON)
+		 * Display the result received from the PHP file*/
 
-		*/
-                printf ("Example of printf: %u", $myString);
+		//On php
+		header ("Content-Type: application/json; charset=UTF-8");
+		$obj = json_decode($_GET["x"], false);
 
+		$conn = new mysql("myServer", "myUser", "myPassword", "Northwind");
+		$stmt = $conn->prepare("SELECT name FROM ? LIMIT ?");
+		$stmt->bind_param("ss", $obj->table, $obj->limit);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$outp = $result->fetch_all($outp);
 
+		/*
+		 * Convert the request into an object, using the PHP function json_decode()
+		 * Access the database and fill an array with the requested data
+		 * Add the array  to an object and return the object as JSON using the json_decode() function*/
 
+		//PHP Method = POST
+		//When sending data to the server, it's often best to use the HTTP POST method
+		//To send AJAX requests using the POST method, specify the method and the correct header
+		//The data sent to the server must now be an argument to the send() method
 
+		//On js
+		/*obj = { "table":"customers", "limit":10 };
+		dbParam = JSON.stringify(obj);
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+		    myObj = JSON.parse(this.responseText);
+		    for (x in myObj) {
+		      txt += myObj[x].name + "<br>";
+		    }
+		    document.getElementById("demo").innerHTML = txt;
+		  }
+		};
+
+		xmlhttp.open("POST", "json_demo_db_post.php, true");
+		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlhttp.send("x=" + dbParam);*/
+
+		//On php
+		header("Content-Type: application/json; charset=UTF-8");
+		$obj = json_decode($_POST["x"], false);
+
+		$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+		$stmt = $conn->prepare("SELECT name FROM ? LIMIT ?");
+		$stmt->bind_param("ss", $obj->table, $obj->limit);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$outp = $result->fetch_all(MYSQL_ASSOC);
+
+		echo json_encode($outp);
 
 ?>
 </div>
