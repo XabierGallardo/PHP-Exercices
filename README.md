@@ -1,2 +1,2 @@
 # PHP-Exercices
-PHP interview questions and exercices
+PHP exercices & interview question :books: :computer: :elephant:
