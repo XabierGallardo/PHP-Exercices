@@ -1,12 +1,56 @@
+/* Nav */
 #minav {
     background-color: #353a40;
-    
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#nav-logo {
+    display: flex;
+    align-items: center;
 }
 
 #minav a {
     color: white;
+    font-size: x-large;
 }
 
 #logocac {
-    width: 100px;
+    width: 170px;
+}
+
+/* Bloque 1 */
+#bloque1_img {
+    background-image: url("imagenes_integrador_front/ba1.jpg");
+    height: 80vh;
+    padding: 0;
+}
+
+#bloque1_opacidad {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#bloque1_texto {
+    width: 50%;
+    text-align: end;
+    padding-right: 10%;
+    /*display: flex;
+    flex-direction: column;
+    height: 50%;
+    border: 1px solid white;
+    justify-content: space-around;*/
+}
+
+#bloque1_texto h4 {
+    font-weight: normal;
+}
+
+#bloque1_btn-1 {
+    border: 1px solid white;
+    margin-right: 2%;
 }
