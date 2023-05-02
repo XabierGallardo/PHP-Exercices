@@ -39,6 +39,11 @@
     width: 50%;
     text-align: end;
     padding-right: 10%;
+    /*display: flex;
+    flex-direction: column;
+    height: 50%;
+    border: 1px solid white;
+    justify-content: space-around;*/
 }
 
 #bloque1_texto h4 {
@@ -48,4 +53,14 @@
 #bloque1_btn-1 {
     border: 1px solid white;
     margin-right: 2%;
+}
+
+/* Footer */
+#mifooter { 
+    margin: 0 auto;
+    background-color: #1c3846;
+}
+
+#mifooter a {
+    color: white;
 }
