@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <!-- Nav -->
     <div class="container-fluid row p-4" id="minav">
         
         <div class="row col-xxl-4" id="nav-logo">
@@ -45,6 +46,7 @@
     </div>
 
     
+    <!-- Bloque 1 Poster -->
     <div class="container-fluid" id="bloque1_img">
 
         <div class="container-fluid text-white" id="bloque1_opacidad">
@@ -57,9 +59,95 @@
                 </div>
             </div>
         </div>
-
     </div>
 
+
+
+    <!-- Bloque 2 Oradores -->
+    <div class="container pt-4 pb-4" id="oradores">
+        <div class="container" id="oradores-presentacion">
+            <h5>CONOCE A LOS</h5>
+            <h1>ORADORES</h1>
+        </div>
+
+        <div class="container-fluid row justify-content-around" id="cartas">
+            
+            <div class="card">
+                <img class="card-img-top" src="imagenes_integrador_front/steve.jpg" alt="Steve Jobs">
+                <div class="card-body">
+                    <button type="button" class="btn btn-warning">JavaScript</button>
+                    <button type="button" class="btn btn-info text-white">React</button>
+                    <h4 class="card-title pt-2">Steve Jobs</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="imagenes_integrador_front/bill.jpg" alt="Bill Gates">
+                <div class="card-body">
+                    <button type="button" class="btn btn-warning">JavaScript</button>
+                    <button type="button" class="btn btn-info text-white">React</button>
+                    <h4 class="card-title pt-2">Bill Gates</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="imagenes_integrador_front/ada.jpeg" alt="Ada Lovelace">
+                <div class="card-body">
+                    <button type="button" class="btn btn-secondary">Negocios</button>
+                    <button type="button" class="btn btn-danger">Startups</button>
+                    <h4 class="card-title pt-2">Ada Lovelace</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Bloque 3 BsAs Octubre -->
+    <div class="container-fluid row pt-4 pb-4" id="bsas">
+        <!--<img class="col" src="imagenes_integrador_front/honolulu.jpg">-->
+        <div class="col" id="bsas-img"></div>
+        <div class="col container-fluid p-3 text-light" id="bsas-texto">
+            <h3>Bs As - Octubre</h3>
+            <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km² de superficie).</p>
+            <button type="button" class="btn btn-primary-outline btn-md text-white" id="bloque1_btn-1">Conocé más</button>
+        </div>
+    </div>
+
+
+
+    <!-- Bloque 4 Formulario -->
+    <div class="container pt-4 pb-4" id="oradores">
+        <div class="container" id="oradores-presentacion">
+            <h5>CONVIÉRTETE EN UN</h5>
+            <h1>ORADOR</h1>
+            <p>Anótate como orador para dar una <span>charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
+        </div>
+
+        <form>
+            <div class="row d-flex justify-content-between">
+
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                </div>
+
+                <textarea class="form-control mt-4" name="text" placeholder="Sobre qué quieres hablar"></textarea>
+                
+                <p class="text-muted">Recuerda incluir un título para tu charla</p>
+
+                <button type="button" class="btn btn-success btn-lg">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
     <footer class="container-fluid row p-4" id="mifooter">
         <!--TODO meter active e disabled-->
         <ul class="container nav col-xxl-8 d-flex justify-content-around">

@@ -20,7 +20,9 @@
     width: 170px;
 }
 
-/* Bloque 1 */
+
+
+/* Bloque 1 Poster*/
 #bloque1_img {
     background-image: url("imagenes_integrador_front/ba1.jpg");
     height: 80vh;
@@ -54,6 +56,64 @@
     border: 1px solid white;
     margin-right: 2%;
 }
+
+
+
+
+/* Bloque 2 Oradores*/
+
+#oradores-presentacion {
+    text-align: center;
+}
+
+.card {
+    width: 380px;
+    padding: 0;
+}
+
+.card img {
+    height: 380px;
+}
+.card-body button {
+    font-weight: bold;
+}
+
+
+
+/* Bloque 3 BsAs*/
+#bsas {
+    height: 600px;
+}
+
+#bsas-img {
+    width: 50%;
+    background-image: url(imagenes_integrador_front/honolulu.jpg);
+    background-size: cover;
+}
+
+#bsas-texto {
+    width: 50%;
+    background-color: #353a40;
+}
+
+
+
+/* Bloque 4 Formulario*/
+#oradores textarea, #oradores > button {
+    width: 98%;
+    margin: 0 auto;
+}
+
+#oradores textarea {
+    height: 125px;
+}
+
+#oradores-presentacion > p > span {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+
 
 /* Footer */
 #mifooter { 
