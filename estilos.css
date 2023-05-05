@@ -25,6 +25,7 @@
 /* Bloque 1 Poster*/
 #bloque1_img {
     background-image: url("imagenes_integrador_front/ba1.jpg");
+    background-position: center;
     height: 80vh;
     padding: 0;
 }
@@ -41,11 +42,6 @@
     width: 50%;
     text-align: end;
     padding-right: 10%;
-    /*display: flex;
-    flex-direction: column;
-    height: 50%;
-    border: 1px solid white;
-    justify-content: space-around;*/
 }
 
 #bloque1_texto h4 {
@@ -62,17 +58,21 @@
 
 /* Bloque 2 Oradores*/
 
-#oradores-presentacion {
+.oradores-presentacion {
     text-align: center;
 }
 
+.oradores-presentacion h5, .card-text {
+    font-weight: lighter;
+}
+
 .card {
-    width: 380px;
+    width: 390px;
     padding: 0;
 }
 
 .card img {
-    height: 380px;
+    height: 390px;
 }
 .card-body button {
     font-weight: bold;
@@ -99,7 +99,7 @@
 
 
 /* Bloque 4 Formulario*/
-#oradores textarea, #oradores > button {
+#oradores textarea, #oradores > button, #boton-submit {
     width: 98%;
     margin: 0 auto;
 }
