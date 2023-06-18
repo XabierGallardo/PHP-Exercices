@@ -9,8 +9,8 @@ btn_resumen.addEventListener("click", resumenTickets);
 
 function resumenTickets() {
 
-    cantidad_tickets = parseInt(input_cantidad.value);
-    valor_categoria = input_categoria.value;
+    let cantidad_tickets = parseInt(input_cantidad.value);
+    let valor_categoria = input_categoria.value;
     
     switch(valor_categoria) {
         case "Estudiante":
@@ -30,6 +30,4 @@ function resumenTickets() {
     }
 
     formulario_resultado.innerHTML = valor_final;
-
-    //console.log(typeof(cantidad_tickets))
 }
