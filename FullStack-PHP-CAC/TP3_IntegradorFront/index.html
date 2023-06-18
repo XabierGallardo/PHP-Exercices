@@ -28,19 +28,19 @@
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#">Los oradores</a>
+                <a class="nav-link text-muted" href="#oradores">Los oradores</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#">El lugar y la fecha</a>
+                <a class="nav-link text-muted" href="#bsas">El lugar y la fecha</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#">Conviértete en orador</a>
+                <a class="nav-link text-muted" href="#formulario">Conviértete en orador</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-success" href="#">Comprar tickets</a>
+                <a class="nav-link text-success" href="#tickets">Comprar tickets</a>
             </li>
         </ul>
     </div>
@@ -120,7 +120,7 @@
 
 
     <!-- Bloque 4 Formulario -->
-    <div class="container pt-4 pb-4" id="oradores">
+    <div class="container pt-4 pb-4" id="formulario">
         <div class="container oradores-presentacion">
             <h5>CONVIÉRTETE EN UN</h5>
             <h1>ORADOR</h1>
@@ -146,6 +146,82 @@
             </div>
         </form>
     </div>
+
+
+
+
+    <!--Bloque 5 Tickets-->
+    <div id="tickets">
+
+        <div id="tickets_botones-general">
+
+            <div id="tickets_botones1" class="tickets_boton">
+                <h5>Estudiante</h5>
+                <p>Tiene un descuento</p>
+                <p><span id="tickets_botones-precio1">80</span>%</p>
+                <small class="text-secondary">* presentar documentacion</small>
+            </div>
+
+            <div id="tickets_botones2" class="tickets_boton">
+                <h5>Trainee</h5>
+                <p>Tiene un descuento</p>
+                <p><span id="tickets_botones-precio2">50</span>%</p>
+                <small class="text-secondary">* presentar documentacion</small>
+            </div>
+
+            <div id="tickets_botones3" class="tickets_boton">
+                <h5>Junior</h5>
+                <p>Tiene un descuento</p>
+                <p><span id="tickets_botones-precio3">15</span>%</p>
+                <small class="text-secondary">* presentar documentacion</small>
+            </div>
+        </div>
+
+        <div id="tickets_formulario-general" class="pt-3">
+            <p class="formulario-intro h6">VENTA</p>
+            <p class="formulario-intro h2">VALOR DE TICKET $200</p>
+            <form>
+                <div class="row d-flex justify-content-between">
+    
+                    <div class="col pt-3">
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                    </div>
+    
+                    <div class="col pt-3">
+                        <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                    </div>
+    
+                    
+                    <div class="pt-3">
+                        <input type="email" class="form-control" placeholder="Correo" name="correo">
+                    </div>
+
+                    <div class="col pt-3 pb-3">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" placeholder="Cantidad" id="cantidad" name="cantidad">
+                    </div>
+
+                    <div class="col pt-3 pb-3">
+                        <label for="categoria" class="form-label">Categoria</label>
+                        <select class="form-select" id="categoria_select">
+                            <option>Estudiante</option>
+                            <option>Trainee</option>
+                            <option>Junior</option>
+                        </select>
+                    </div>
+
+                    <p class="formulario-resultado">Total a pagar: <span id="tickets_formulario-resultado"></span>$</p>
+    
+                    <div id="tickets_formulario-botones" class="d-flex justify-content-between pt-3">
+                        <input type="reset" class="btn btn-success" value="Borrar">
+                        <input type="button" id="tickets_formulario-resumen" class="btn btn-success" value="Resumen">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 
     <!-- Footer -->
     <footer class="container-fluid row p-4" id="mifooter">
@@ -181,6 +257,6 @@
         </ul>
     </footer>
     
-    
+    <script src="integrador2.js"></script>
 </body>
 </html>

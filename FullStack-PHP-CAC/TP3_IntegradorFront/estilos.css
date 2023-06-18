@@ -113,6 +113,58 @@
     text-decoration-style: dotted;
 }
 
+/* Bloque 5 Tickets*/
+#tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    margin-top: 2%;
+}
+#tickets_botones-general {
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#tickets_botones-general span {
+    font-weight: bold;
+}
+
+.tickets_boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+#tickets_botones1 { border: 2px solid #2b91ff;}
+#tickets_botones2 { border: 2px solid #30acbf;}
+#tickets_botones3 { border: 2px solid #fed250;}
+
+
+
+#tickets_formulario-general {
+    width: 45%;
+}
+
+#tickets_formulario-botones input {
+    width: 45%;
+}
+
+.formulario-intro { text-align: center;}
+
+.formulario-resultado {
+    background-color: #cce5ff;
+    color: #2b54a2;
+    width: 96%;
+    padding: 2%;
+    margin-top: 5px;
+    margin: 0 auto;
+}
 
 
 /* Footer */
