@@ -1,9 +1,9 @@
 /* Nav */
 #minav {
-    background-color: #353a40;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 #nav-logo {
@@ -11,40 +11,56 @@
     align-items: center;
 }
 
+#nav-logo_link { text-decoration: none;}
+#nav-logo_link img { width: 44px;}
+
 #minav a {
-    color: white;
+    font-size: larger;
+    color: #212529;
+}
+
+#minav a:hover {
+    color: #008c4b;
+}
+
+#logo_titulo {
+    color: #008c4b;
+    margin-bottom: 0px;
+    padding-left: 8px;
     font-size: x-large;
 }
 
-#logocac { width: 170px; }
+#encuentros img {
+    height: 92vh;
+    background-size: cover;
+}
 
 
 
 /* Bloque 1 Poster*/
-#bloque1_img {
-    background-image: url("imagenes_integrador_front/ba1.jpg");
+.poster_img {
+    z-index: 1;
     background-position: center;
-    height: 80vh;
-    padding: 0;
 }
 
-#bloque1_opacidad {
+.poster_opacidad {
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    position: absolute;
 }
 
-#bloque1_texto {
+.poster_texto {
     width: 50%;
     text-align: end;
     padding-right: 10%;
 }
 
-#bloque1_texto h4 { font-weight: normal; }
+.poster_texto h4 { font-weight: normal; }
 
-#bloque1_btn-1 {
+.poster_btn-1 {
     border: 1px solid white;
     margin-right: 2%;
 }

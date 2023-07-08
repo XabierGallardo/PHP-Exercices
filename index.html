@@ -7,7 +7,9 @@
     <title>TP Integrador Front</title>
 
     <!--Bootstrap y CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/1_favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -16,26 +18,28 @@
     <!-- Nav -->
     <div class="container-fluid row p-3" id="minav">
         
-        <div class="row col-xxl-4" id="nav-logo">
-            <img class="col-xxl-6" id="logocac" src="imagenes_integrador_front/codoacodo.png" alt="logo codo a codo">
-            <h3 class="text-white col-xxl-6">Conf Bs As</h3>
-        </div>
+        <a id="nav-logo_link" class="row col-xxl-4"  href="#">
+            <div id="nav-logo">
+                    <img src="img/1_favicon.png" alt="logo mate">
+                    <h3 id="logo_titulo">Materos Rioplatenses</h3>
+            </div>
+        </a>
 
-        <ul class="nav col-xxl-8">
+        <ul class="nav col-xxl-6">
             <li class="nav-item">
-                <a class="nav-link" href="#">La conferencia</a>
+                <a class="nav-link" href="#encuentros">Encuentros</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#oradores">Los oradores</a>
+                <a class="nav-link" href="#oradores">Los oradores</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#bsas">El lugar y la fecha</a>
+                <a class="nav-link" href="#bsas">El lugar y la fecha</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link text-muted" href="#formulario">Conviértete en orador</a>
+                <a class="nav-link" href="#formulario">Conviértete en orador</a>
             </li>
     
             <li class="nav-item">
@@ -44,9 +48,72 @@
         </ul>
     </div>
 
-    
-    <!-- Bloque 1 Poster -->
-    <div class="container-fluid" id="bloque1_img">
+
+    <!-- Bloque 1 Slider -->
+    <div id="encuentros" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#encuentros" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#encuentros" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#encuentros" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container-fluid text-white poster_opacidad" id="bloque1_opacidad">
+                    <div class="pr-5 poster_texto" id="bloque1_texto">
+                        <h1>Río Paraná</h1>
+                        <h4>El Río Corrientes es un río en la provincia de Corrientes  también conocida como la Mesopotamia Argentina. Los dos principales cauces de esta ciudad con el Río Parana y el Río Uruguay.</h4>
+                        <div class="m-4" id="bloque1_texto-botones">
+                            <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
+                            <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <img class="d-block w-100" src="img/rioparana1-min.jpg" id="bloque1_img" alt="Rio Parana">
+            </div>
+        
+            <div class="carousel-item">
+                <div class="container-fluid text-white poster_opacidad" id="bloque1_opacidad">
+                    <div class="pr-5 poster_texto" id="bloque1_texto">
+                        <h1>Río Uruguay</h1>
+                        <h4>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</h4>
+                        <div class="m-4" id="bloque1_texto-botones">
+                            <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
+                            <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <img class="d-block w-100" src="img/corrientes2-min.jpg" alt="Corrientes foto 2">
+            </div>
+
+            <div class="carousel-item">
+                <div class="container-fluid text-white poster_opacidad" id="bloque1_opacidad">
+                    <div class="pr-5 poster_texto" id="bloque1_texto">
+                        <h1>Iguazú</h1>
+                        <h4>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</h4>
+                        <div class="m-4" id="bloque1_texto-botones">
+                            <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
+                            <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <img class="d-block w-100" src="img/misiones1-min.jpg" alt="Misiones foto 1">
+            </div>
+        </div>
+        
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#encuentros" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#encuentros" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+    </div>
+
+    <!--
+        <div class="container-fluid" id="bloque1_img">
 
         <div class="container-fluid text-white" id="bloque1_opacidad">
             <div class="pr-5" id="bloque1_texto">
@@ -59,6 +126,9 @@
             </div>
         </div>
     </div>
+    -->
+    <!--#008c4b verde-->
+    
 
 
     <!-- Bloque 2 Oradores -->
@@ -71,7 +141,7 @@
         <div class="container-fluid row justify-content-around" id="cartas">
             
             <div class="card">
-                <img class="card-img-top" src="imagenes_integrador_front/steve.jpg" alt="Steve Jobs">
+                <img class="card-img-top" src="img/steve.jpg" alt="Steve Jobs">
                 <div class="card-body">
                     <button type="button" class="btn btn-warning">JavaScript</button>
                     <button type="button" class="btn btn-info text-white">React</button>
@@ -81,7 +151,7 @@
             </div>
 
             <div class="card">
-                <img class="card-img-top" src="imagenes_integrador_front/bill.jpg" alt="Bill Gates">
+                <img class="card-img-top" src="img/bill.jpg" alt="Bill Gates">
                 <div class="card-body">
                     <button type="button" class="btn btn-warning">JavaScript</button>
                     <button type="button" class="btn btn-info text-white">React</button>
@@ -91,7 +161,7 @@
             </div>
 
             <div class="card">
-                <img class="card-img-top" src="imagenes_integrador_front/ada.jpeg" alt="Ada Lovelace">
+                <img class="card-img-top" src="img/ada.jpeg" alt="Ada Lovelace">
                 <div class="card-body">
                     <button type="button" class="btn btn-secondary">Negocios</button>
                     <button type="button" class="btn btn-danger">Startups</button>
@@ -106,7 +176,7 @@
 
     <!-- Bloque 3 BsAs Octubre -->
     <div class="container-fluid row pt-4 pb-4" id="bsas">
-        <!--<img class="col" src="imagenes_integrador_front/honolulu.jpg">-->
+        <!--<img class="col" src="img/honolulu.jpg">-->
         <div class="col" id="bsas-img"></div>
         <div class="col container-fluid p-3 text-light" id="bsas-texto">
             <h3>Bs As - Octubre</h3>
@@ -137,7 +207,7 @@
 
                 <textarea class="form-control mt-4" name="text" placeholder="Sobre qué quieres hablar"></textarea>
                 
-                <p class="text-muted">Recuerda incluir un título para tu charla</p>
+                <p class="text-dark">Recuerda incluir un título para tu charla</p>
 
                 <button type="button" class="btn btn-success btn-lg" id="boton-submit">Enviar</button>
             </div>
