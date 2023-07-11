@@ -18,44 +18,40 @@
     <!-- Nav -->
     <div class="container-fluid row p-3" id="minav">
         
-        <a id="nav-logo_link" class="row col-xxl-4"  href="#">
+        <a id="nav-logo_link" class="row col-xxl-6"  href="#">
             <div id="nav-logo">
                     <img src="img/1_favicon.png" alt="logo mate">
                     <h3 id="logo_titulo">Materos Rioplatenses</h3>
             </div>
         </a>
 
-        <ul class="nav col-xxl-6">
+        <ul class="nav col-xxl-5">
+            <li class="nav-item">
+                <a class="nav-link" href="#lugares">Lugares</a>
+            </li>
+    
             <li class="nav-item">
                 <a class="nav-link" href="#encuentros">Encuentros</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link" href="#oradores">Los oradores</a>
+                <a class="nav-link" href="#formulario">Sumate a la comunidad</a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link" href="#bsas">El lugar y la fecha</a>
-            </li>
-    
-            <li class="nav-item">
-                <a class="nav-link" href="#formulario">Conviértete en orador</a>
-            </li>
-    
-            <li class="nav-item">
-                <a class="nav-link text-success" href="#tickets">Comprar tickets</a>
+                <a class="nav-link text-success" href="#tickets">Colaborá con los encuentros</a>
             </li>
         </ul>
     </div>
 
 
     <!-- Bloque 1 Slider -->
-    <div id="encuentros" class="carousel slide" data-bs-ride="carousel">
+    <div id="lugares" class="carousel slide" data-bs-ride="carousel">
 
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#encuentros" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#encuentros" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#encuentros" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#lugares" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#lugares" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#lugares" data-bs-slide-to="2"></button>
         </div>
         
         <div class="carousel-inner">
@@ -63,10 +59,15 @@
                 <div class="container-fluid text-white poster_opacidad" id="bloque1_opacidad">
                     <div class="pr-5 poster_texto" id="bloque1_texto">
                         <h1>Río Paraná</h1>
-                        <h4>El Río Corrientes es un río en la provincia de Corrientes  también conocida como la Mesopotamia Argentina. Los dos principales cauces de esta ciudad con el Río Parana y el Río Uruguay.</h4>
+                        <h4>El Paraná es un largo río del centro-este de Sudamérica que fluye en direcciones sur, este, sudoeste a través de Brasil, Paraguay y Argentina. Tiene una longitud de 2546 kilómetros que lo sitúan como el segundo río más largo de América del Sur. Es una continuación del río Grande, recibiendo el nombre del río Paraná en la confluencia con el río Paranaíba.</h4>
                         <div class="m-4" id="bloque1_texto-botones">
-                            <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
-                            <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                            <a href="#encuentros">
+                                <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
+                            </a>
+
+                            <a href="#tickets">
+                                <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -77,10 +78,15 @@
                 <div class="container-fluid text-white poster_opacidad" id="bloque1_opacidad">
                     <div class="pr-5 poster_texto" id="bloque1_texto">
                         <h1>Río Uruguay</h1>
-                        <h4>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</h4>
+                        <h4>El río Uruguay es un río internacional de América del Sur que junto con los ríos Paraná, Paraguay y otros cursos fluviales forman la cuenca del Plata. Nace en la Sierra Geral en el sudeste de Brasil en la confluencia de los ríos Canoas y Pelotas en el límite entre los estados de Río Grande del Sur y Santa Catarina, y desemboca en el Río de la Plata en el lugar llamado punta Gorda entre el departamento uruguayo de Colonia y el argentino de Islas del Ibicuy en la provincia de Entre Ríos.</h4>
                         <div class="m-4" id="bloque1_texto-botones">
-                            <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
-                            <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                            <a href="#encuentros">
+                                <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
+                            </a>
+
+                            <a href="#tickets">
+                                <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -91,10 +97,14 @@
                 <div class="container-fluid text-white poster_opacidad" id="bloque1_opacidad">
                     <div class="pr-5 poster_texto" id="bloque1_texto">
                         <h1>Iguazú</h1>
-                        <h4>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</h4>
+                        <h4>El río Iguazú es un río del sur de Brasil y del nordeste de la Argentina, en el centro-este de América del Sur. Pertenece a la cuenca del Plata. Nace en el cordón montañoso brasileño denominado Serra do Mar, en el estado de Paraná, y luego de un recorrido de aproximadamente 1300 kilómetros desemboca en el río Paraná.</h4>
                         <div class="m-4" id="bloque1_texto-botones">
-                            <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
-                            <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                            <a href="#encuentros">
+                                <button type="button poster_btn-1" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Ver más</button>
+                            </a>
+                            <a href="#tickets">
+                                <button type="button poster_btn-2" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -103,69 +113,49 @@
         </div>
         
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#encuentros" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#lugares" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#encuentros" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#lugares" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
     </div>
-
-    <!--
-        <div class="container-fluid" id="bloque1_img">
-
-        <div class="container-fluid text-white" id="bloque1_opacidad">
-            <div class="pr-5" id="bloque1_texto">
-                <h1>Conf Bs As</h1>
-                <h4>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</h4>
-                <div class="m-4" id="bloque1_texto-botones">
-                    <button type="button" class="btn btn-primary-outline btn-lg text-white" id="bloque1_btn-1">Quiero ser orador</button>
-                    <button type="button" class="btn btn-success btn-lg" id="bloque1-btn_2">Comprar tickets</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!--#008c4b verde-->
     
 
-
+    <!--#008c4b verde-->
     <!-- Bloque 2 Oradores -->
-    <div class="container pt-4 pb-4" id="oradores">
+    <div class="container pt-4 pb-4" id="encuentros">
         <div class="container oradores-presentacion">
-            <h5>CONOCE A LOS</h5>
-            <h1>ORADORES</h1>
+            <h5>SUMATE A LA COMUNIDAD MATERA RIOPLATENSE</h5>
+            <h1>ENCUENTROS</h1>
         </div>
 
         <div class="container-fluid row justify-content-around" id="cartas">
             
             <div class="card">
-                <img class="card-img-top" src="img/steve.jpg" alt="Steve Jobs">
+                <img class="card-img-top" src="img/mate7-min.jpg" alt="yerba rio parana">
                 <div class="card-body">
-                    <button type="button" class="btn btn-warning">JavaScript</button>
-                    <button type="button" class="btn btn-info text-white">React</button>
-                    <h4 class="card-title pt-2">Steve Jobs</h4>
+                    <button type="button" class="btn btn-info text-white">Argentina</button>
+                    <h4 class="card-title pt-2">Río Paraná</h4>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img-top" src="img/bill.jpg" alt="Bill Gates">
+                <img class="card-img-top" src="img/mate9-min.jpg" alt="campo rio uruguay">
                 <div class="card-body">
-                    <button type="button" class="btn btn-warning">JavaScript</button>
-                    <button type="button" class="btn btn-info text-white">React</button>
-                    <h4 class="card-title pt-2">Bill Gates</h4>
+                    <button type="button" class="btn btn-info text-white">Argentina</button>
+                    <h4 class="card-title pt-2">Río Uruguay</h4>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img-top" src="img/ada.jpeg" alt="Ada Lovelace">
+                <img class="card-img-top" src="img/misiones1-min.jpg" alt="cataratas iguazu">
                 <div class="card-body">
-                    <button type="button" class="btn btn-secondary">Negocios</button>
-                    <button type="button" class="btn btn-danger">Startups</button>
-                    <h4 class="card-title pt-2">Ada Lovelace</h4>
+                    <button type="button" class="btn btn-warning text-success">Brasil</button>
+                    <h4 class="card-title pt-2">Río Iguazú</h4>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                 </div>
             </div>
@@ -175,11 +165,11 @@
 
 
     <!-- Bloque 3 BsAs Octubre -->
-    <div class="container-fluid row pt-4 pb-4" id="bsas">
+    <div class="container row pt-4 pb-4" id="bsas">
         <!--<img class="col" src="img/honolulu.jpg">-->
         <div class="col" id="bsas-img"></div>
         <div class="col container-fluid p-3 text-light" id="bsas-texto">
-            <h3>Bs As - Octubre</h3>
+            <h3>Nuestra comunidad</h3>
             <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km² de superficie).</p>
             <button type="button" class="btn btn-primary-outline btn-md text-white" id="bloque1_btn-1">Conocé más</button>
         </div>
@@ -189,9 +179,9 @@
     <!-- Bloque 4 Formulario -->
     <div class="container pt-4 pb-4" id="formulario">
         <div class="container oradores-presentacion">
-            <h5>CONVIÉRTETE EN UN</h5>
-            <h1>ORADOR</h1>
-            <p>Anótate como orador para dar una <span>charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
+            <h5>PODÉS REALIZAR TU TALLER</h5>
+            <h1>TALLERISTA</h1>
+            <p>Anótate como tallerista y <span>presenta tus ideas</span>. Cuéntanos de qué quieres hablar!</p>
         </div>
 
         <form>
@@ -207,7 +197,7 @@
 
                 <textarea class="form-control mt-4" name="text" placeholder="Sobre qué quieres hablar"></textarea>
                 
-                <p class="text-dark">Recuerda incluir un título para tu charla</p>
+                <p class="text-muted">Recuerda incluir un título</p>
 
                 <button type="button" class="btn btn-success btn-lg" id="boton-submit">Enviar</button>
             </div>
@@ -243,8 +233,8 @@
         </div>
 
         <div id="tickets_formulario-general" class="pt-3">
-            <p class="formulario-intro h6">VENTA</p>
-            <p class="formulario-intro h2">VALOR DE TICKET $200</p>
+            <p class="formulario-intro h6">COLABORÁ CON EL PROYECTO</p>
+            <p class="formulario-intro h2">APORTE SUGERIDO $200</p>
             <form>
                 <div class="row d-flex justify-content-between">
     
@@ -278,8 +268,8 @@
                     <p class="formulario-resultado">Total a pagar: <span id="tickets_formulario-resultado"></span>$</p>
     
                     <div id="tickets_formulario-botones" class="d-flex justify-content-between pt-3">
-                        <input type="reset" class="btn btn-success" value="Borrar">
-                        <input type="button" id="tickets_formulario-resumen" class="btn btn-success" value="Resumen">
+                        <input type="reset" class="btn btn-danger" value="Borrar">
+                        <input type="button" id="tickets_formulario-resumen" class="btn btn-primary" value="Resumen">
                     </div>
                 </div>
             </form>
@@ -289,34 +279,29 @@
 
     <!-- Footer -->
     <footer class="container-fluid row p-4" id="mifooter">
-    
-        <ul class="container nav col-xxl-8 d-flex justify-content-around">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Preguntas frecuentes</a>
-            </li>
-    
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contáctanos</a>
-            </li>
-    
-            <li class="nav-item">
-                <a class="nav-link" href="#">Prensa</a>
-            </li>
-    
-            <li class="nav-item">
-                <a class="nav-link" href="#">Conferencias</a>
-            </li>
-    
-            <li class="nav-item">
-                <a class="nav-link" href="#">Términos y condiciones</a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">Privacidad</a>
-            </li>
+        <a id="footer-logo_link" class="row col-xxl-6"  href="#">
+            <div id="footer-logo">
+                    <img id="footer-logo_img" src="img/1_favicon.png" alt="logo mate">
+                    <h3 id="footer-logo_texto">Materos Rioplatenses</h3>
+            </div>
+        </a>
 
+        <ul class="nav col-xxl-5">
             <li class="nav-item">
-                <a class="nav-link" href="#">Estudiantes</a>
+                <a class="nav-link" href="#lugares">Lugares</a>
+            </li>
+    
+            <li class="nav-item">
+                <a class="nav-link" href="#encuentros">Encuentros</a>
+            </li>
+    
+            <li class="nav-item">
+                <a class="nav-link" href="#formulario">Sumate a la comunidad</a>
+            </li>
+    
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#tickets">Colaborá con los encuentros</a>
             </li>
         </ul>
     </footer>

@@ -1,18 +1,18 @@
 /* Nav */
-#minav {
+#minav, #mifooter {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-#nav-logo {
+#nav-logo, #footer-logo {
     display: flex;
     align-items: center;
 }
 
-#nav-logo_link { text-decoration: none;}
-#nav-logo_link img { width: 44px;}
+#nav-logo_link, #footer-logo_link { text-decoration: none;}
+#nav-logo_link img, #footer-logo_link img { width: 44px;}
 
 #minav a {
     font-size: larger;
@@ -30,7 +30,7 @@
     font-size: x-large;
 }
 
-#encuentros img {
+#lugares img {
     height: 92vh;
     background-size: cover;
 }
@@ -65,6 +65,8 @@
     margin-right: 2%;
 }
 
+.carousel-item a { text-decoration: none;}
+
 
 
 
@@ -79,7 +81,11 @@
     padding: 0;
 }
 
-.card img { height: 390px; }
+.card img { 
+    height: 390px; 
+    object-fit: cover;
+}
+
 .card-body button {
     font-weight: bold;
 }
@@ -87,26 +93,37 @@
 
 
 /* Bloque 3 BsAs*/
-#bsas { height: 600px; }
+#bsas { 
+    height: 600px;
+    margin: 0 auto;
+}
 
 #bsas-img {
     width: 50%;
-    background-image: url(imagenes_integrador_front/honolulu.jpg);
+    background-image: url(img/misiones4-min.jpg);
     background-size: cover;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 #bsas-texto {
     width: 50%;
     background-color: #353a40;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 
 
 /* Bloque 4 Formulario*/
+#formulario {
+    width: 42%;
+}
+
 #formulario textarea, #formulario > button, #boton-submit {
-    width: 98%;
+    width: 97%;
     margin: 0 auto;
-    border: 1px solid;
+    border: 1px solid #dee2e6;
 }
 
 #oradores-presentacion > p > span {
@@ -140,9 +157,9 @@
     width: 25%;
 }
 
-#tickets_botones1 { border: 2px solid #2b91ff;}
-#tickets_botones2 { border: 2px solid #30acbf;}
-#tickets_botones3 { border: 2px solid #fed250;}
+#tickets_botones1 { border: 2px solid #0d6efd;}
+#tickets_botones2 { border: 2px solid #dc3545;}
+#tickets_botones3 { border: 2px solid #ffc107;}
 
 #tickets_formulario-general { width: 45%; }
 
@@ -164,7 +181,14 @@
 /* Footer */
 #mifooter { 
     margin: 0 auto;
-    background-color: #1c3846;
+    background-color: #008c4b;
+}
+
+#footer-logo_texto{ color: white;}
+#footer-logo_img { 
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 #mifooter a { color: white; }
