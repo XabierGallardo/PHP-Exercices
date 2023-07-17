@@ -132,13 +132,17 @@
     text-decoration-style: dotted;
 }
 
+#tabla_oradores th {
+    color: #008c4b;
+}
+
 /* Bloque 5 Tickets*/
 #tickets {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 70vh;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 #tickets_botones-general {
     display: flex;

@@ -1,3 +1,19 @@
+<?php 
+//Display errors
+/*
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+*/
+
+$db_servername = "sql108.infinityfree.com";
+$db_username = "if0_34628593";
+$db_password = "m5W6wXvktwsMn6X";
+$db_dbname = "if0_34628593_materos2023";
+
+$conexion = mysqli_connect($db_servername, $db_username, $db_password, $db_dbname);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -182,28 +198,170 @@
         <div class="container oradores-presentacion">
             <h5>PODÉS REALIZAR TU TALLER</h5>
             <h1>TALLERISTA</h1>
-            <p>Anótate como tallerista y <span>presenta tus ideas</span>. Cuéntanos de qué quieres hablar!</p>
+            <p>Anótate como tallerista y <span>presenta tus ideas</span>. Contanos de que querés hablar!</p>
         </div>
 
-        <form>
+        <form action="welcome.php" method="post">
             <div class="row d-flex justify-content-between">
 
+                <!-- Nombre y apellidos -->                
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                    <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
                 </div>
 
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                    <input type="text" class="form-control" placeholder="Apellido" name="apellido" required>
+                </div>
+            
+
+                <!-- Edad y fecha -->
+                <div class="mb-3"></div>
+                <div class="col">
+                    <input type="number" min="1" max="99" class="form-control" placeholder="Edad" name="edad" required>
                 </div>
 
-                <textarea class="form-control mt-4" name="text" placeholder="Sobre qué quieres hablar"></textarea>
+                <div class="col">
+                    <input type="date" class="form-control" placeholder="Fecha" name="fecha" required>
+                </div>
                 
-                <p class="text-muted">Recuerda incluir un título</p>
 
-                <button type="button" class="btn btn-success btn-lg" id="boton-submit">Enviar</button>
+                <!-- Encuentro y tema -->
+                <div class="mb-3"></div>
+                <div class="col">
+                    <select class="form-select" name="encuentro">
+                        <option>Parana</option>
+                        <option>Uruguay</option>
+                        <option>Iguazú</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <select class="form-select" name="tema">
+                        <option>Historia</option>
+                        <option>Cooperativas</option>
+                        <option>Literatura</option>
+                        <option>Arte</option>
+                    </select>  
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg mt-3" id="boton-submit">Enviar</button>
+
+                <?php
+                $nombre = $_POST['nombre'];
+                $apellido = $_POST['apellido'];
+                $edad = $_POST['edad'];
+                $fecha = $_POST['fecha'];
+                $encuentro = $_POST['encuentro'];
+                $tema = $_POST['tema'];
+
+                $queryOrador = "INSERT INTO `oradores` (`id`, `nombre`, `apellido`, `edad`, `fecha`, `encuentro`, `tema`) VALUES (NULL, '$nombre', '$apellido', '$edad', '$fecha', '$encuentro','$tema')";
+
+                if(!$conexion) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+
+                if(isset($nombre) && isset($apellido) && isset($edad) && isset($fecha) && isset($encuentro) && isset($tema)) {
+
+                    if(mysqli_query($conexion,$queryOrador)) {
+
+                        echo "<p class='mt-3'>Tallerista insertado correctamente!</p>";
+                        header("Refresh:0");
+
+                        } else {
+
+                            echo "Error: " . $queryOrador . "<br>" . $mysqli_error($conexion);
+                    }
+                }
+                
+                ?>
             </div>
         </form>
     </div>
+
+
+    <!-- Tabla Oradores -->
+    <div class="container mt-3" id="tabla_oradores">
+        <h2>Listado talleristas</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Encuentro</th>
+                <th>Tema</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <?php
+                if(!$conexion) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+
+                $oradores = mysqli_query($conexion, "SELECT * from oradores");
+
+                if(mysqli_connect_errno()) {
+
+                    echo "Error de conexion";
+
+                } else {
+
+                    while($listado_oradores = mysqli_fetch_array($oradores)) {
+
+                        echo "<tr>";
+                        echo "<td>".$listado_oradores["id"]."</td>";
+                        echo "<td>".$listado_oradores["nombre"]."</td>";
+                        echo "<td>".$listado_oradores["apellido"]."</td>";
+                        echo "<td>".$listado_oradores["encuentro"]."</td>";
+                        echo "<td>".$listado_oradores["tema"]."</td>";
+                        echo "</tr>";
+                    }    
+                }
+                ?>
+
+            </tr>
+            </tbody>
+        </table>
+
+        <form action="welcome.php" method="post" id="formulario_eliminar">
+            <div class="row d-flex justify-content-between">
+                <div class="mb-3"></div>
+                <div class="col d-flex justify-content-end">
+                    <input type="number" min="1" max="99" class="form-control w-25" placeholder="id" name="id">
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-danger" id="boton-eliminar">Eliminar</button>
+                </div>
+            </div>
+        </form>
+
+        <?php
+        $orador_id = $_POST['id'];
+
+        $queryEliminar = "DELETE FROM oradores WHERE id="."'$orador_id'";
+
+        if(!$conexion) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        if(isset($orador_id)) {
+
+            if(mysqli_query($conexion,$queryEliminar)) {
+
+                echo "<p class='mt-3'>Tallerista eliminado correctamente! Por favor refresque la página</p>";
+
+                } else {
+
+                    echo "Error: " . $queryOrador . "<br>" . $mysqli_error($conexion);
+            }
+        }
+        
+        ?>
+        
+    </div>
+
+    
 
 
     <!--Bloque 5 Tickets-->
